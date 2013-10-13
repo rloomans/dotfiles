@@ -36,11 +36,19 @@ nmap k gk
 nmap j gj
 
 " plugin customisation
+" --------------------
+
 let g:pymode_folding = 0
 let g:pymode_lint = 0
 
+" jedi, only on c-space
+let g:jedi#popup_on_dot = 0
+
 " turn on git branch for airline
 let g:airline#extensions#branch#enabled = 1
+
+" filter things out of ctrlp
+set wildignore+=*.pyc
 
 map <M-pagedown> :bn <CR>
 map <M-pageup> :bp <CR>
