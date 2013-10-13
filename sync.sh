@@ -11,6 +11,6 @@ git pull origin master
 
 # pull submodules (used for git plugins)
 git submodule init
-git submoudle update
+git submodule update
 
 dotfiles -s
