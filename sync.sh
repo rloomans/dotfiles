@@ -9,7 +9,12 @@ cd ~/.dotfiles
 
 git pull origin master
 
-# pull submodules (used for git plugins)
+# one-time install of dotfilesrc
+if [ ! -e ~/.dotfilesrc ]; then
+    ln -s ~/.dotfiles/dotfilesrc ~/.dotfilesrc
+fi
+
+# update submodules (used for vim plugins)
 git submodule init
 git submodule update
 
