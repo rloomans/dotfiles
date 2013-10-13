@@ -3,6 +3,7 @@ repository = ~/.dotfiles
 ignore = [
     'README.md',
     '.git',
+    '.gitmodules',
     '.gitignore',
     '*.swp']
 externals = {
