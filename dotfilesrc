@@ -1,6 +1,7 @@
 [dotfiles]
 repository = ~/.dotfiles
 ignore = [
+    'sync.sh',
     'README.md',
     '.git',
     '.gitmodules',
