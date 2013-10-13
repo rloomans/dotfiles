@@ -1,7 +1,7 @@
 execute pathogen#infect()
 syntax on
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 set number
 
