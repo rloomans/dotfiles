@@ -10,3 +10,6 @@
 [submodule "vim/bundle/github-colors"]
 	path = vim/bundle/github-colors
 	url = https://github.com/ricardovaleriano/vim-github-theme.git
+[submodule "vim/bundle/kolor"]
+	path = vim/bundle/kolor
+	url = https://github.com/zeis/vim-kolor.git
