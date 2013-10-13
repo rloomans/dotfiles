@@ -1,11 +1,11 @@
 execute pathogen#infect()
 syntax on
-colorscheme github
+colorscheme jellybeans
 
-set number
 
 filetype plugin indent on
 
+set number
 " search case insensitive unless Caps in search term
 set incsearch
 set hlsearch
