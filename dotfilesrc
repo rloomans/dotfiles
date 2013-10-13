@@ -1,5 +1,4 @@
 [dotfiles]
-prefix = .
 repository = ~/.dotfiles
 ignore = [
     'README.md',
