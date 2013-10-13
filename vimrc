@@ -11,7 +11,7 @@ set incsearch
 set hlsearch
 set smartcase
 set mouse=a
-set noesckeys
+"set noesckeys
 set cursorline
 hi CursorLine term=NONE cterm=NONE guibg=Grey40
 
