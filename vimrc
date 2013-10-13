@@ -1,7 +1,6 @@
 execute pathogen#infect()
 syntax on
-set background=dark
-"colorscheme solarized
+colorscheme github
 
 set number
 
@@ -13,6 +12,8 @@ set hlsearch
 set smartcase
 set mouse=a
 set noesckeys
+set cursorline
+hi CursorLine term=NONE cterm=NONE guibg=Grey40
 
 " trim trailing whitespace for python files (pep8)
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
@@ -43,6 +44,7 @@ map <M-pageup> :bp <CR>
 
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 let g:ctrlp_cmd = 'CtrlPCurWD'
 set tabstop=4
 set softtabstop=4

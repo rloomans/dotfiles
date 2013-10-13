@@ -4,3 +4,9 @@
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/github-colorscheme"]
+	path = vim/bundle/github-colorscheme
+	url = https://github.com/endel/vim-github-colorscheme.git
+[submodule "vim/bundle/github-colors"]
+	path = vim/bundle/github-colors
+	url = https://github.com/ricardovaleriano/vim-github-theme.git
