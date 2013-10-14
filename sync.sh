@@ -15,7 +15,6 @@ if [ ! -e ~/.dotfilesrc ]; then
 fi
 
 # update submodules (used for vim plugins)
-git submodule init
-git submodule update
+git submodule update --init --recursive
 
 dotfiles -s
