@@ -27,7 +27,7 @@ autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
 au BufNewFile,BufRead *.tac set filetype=python
 
 " key mapping
-map <leader>n :NERDTreeToggle<CR>
+map <leader>t :NERDTreeToggle<CR>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
 
