@@ -43,6 +43,7 @@ export TERM=xterm-256color
 source virtualenvwrapper.sh
 alias l='ls -l'
 
+# tricks so that ctrl-s works in vim
 alias vim="stty stop '' -ixoff ; vim"
 # `Frozing' tty, so after any command terminal settings will be restored
 ttyctl -f
