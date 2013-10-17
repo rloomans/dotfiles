@@ -38,10 +38,12 @@ plugins=(git history-substring-search command-not-found)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/home/jay/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/jay/bin:/opt/glassfish/bin:/home/jay/sublime_text
+export PATH=/home/jsweeney/grails/bin:/home/jsweeney/bin:/home/jsweeney/wotif-bin:/home/jsweeney/glassfish/bin:/home/jsweeney/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/jsweeney/jython/bin:/opt/apache-maven/bin:/opt/gradle/bin:/opt/Eracom/bin
+export PATH='/opt/firefox':$PATH
 export TERM=xterm-256color 
 source virtualenvwrapper.sh
 alias l='ls -l'
+unsetopt correct_all
 
 alias vim="stty stop '' -ixoff ; vim"
 # `Frozing' tty, so after any command terminal settings will be restored
@@ -56,3 +58,43 @@ vim()
     command vim "$@"
     stty "$STTYOPTS"
 }
+alias mvn-jetty-debug='MAVEN_OPTS="-XX:MaxPermSize=2048m -Xrunjdwp:transport=dt_socket,address=8000,server=y" mvn jetty:run'
+alias mysql="mysql --pager='less -n -i -S -F -X'"
+alias l=ls
+export ORACLE_HOME=/opt/instantclient
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME:/opt/Eracom/lib
+
+export CLASSPATH=$CLASSPATH:/usr/share/java/libreadline-java.jar
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/jni/
+
+#alias ijython='/home/jsweeney/jython/bin/ipython'
+
+export PAGER='less -n -i -S -F -X'
+export PYTHONPATH=$PYTHONPATH:/home/jsweeney/python
+#export JAVA_HOME=/usr/lib/jvm/java-6-sun
+
+export GIT_PS1_SHOWDIRTYSTATE=true
+source /usr/local/bin/virtualenvwrapper.sh
+export PYTHONPATH=$PYTHONPATH:/home/jsweeney/pylib
+
+# this seems to be needed by vim Powerline for colors to work
+# not sure why...!
+export TERM="xterm-256color"
+
+# function _fab_complete() { 
+#     local cur 
+ #    cur="${COMP_WORDS[COMP_CWORD]}" 
+#     COMPREPLY=( $(compgen -W "$(fab -F short -l)" -- ${cur}) ) 
+#     return 0 
+# } 
+
+# enable programmable completion features (you don't need to enable 
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile 
+# sources /etc/bash.bashrc). 
+
+# dircolors for solarized from:
+# curl https://raw.github.com/seebi/dircolors-solarized/master/dircolors.256dark > ~/.dircolors
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
