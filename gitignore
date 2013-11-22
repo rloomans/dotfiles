@@ -5,3 +5,16 @@ build
 dist
 *.egg-info
 *.orig
+
+# catags
+tags
+
+# java things
+.project
+.settings
+.classpath
+.checkstyle
+target/
+
+# temp file:
+*~

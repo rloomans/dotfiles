@@ -16,7 +16,7 @@ ZSH_THEME="pygmalion"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
@@ -41,7 +41,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/home/jsweeney/grails/bin:/home/jsweeney/bin:/home/jsweeney/wotif-bin:/home/jsweeney/glassfish/bin:/home/jsweeney/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/jsweeney/jython/bin:/opt/apache-maven/bin:/opt/gradle/bin:/opt/Eracom/bin
 export PATH='/opt/firefox':$PATH
 export TERM=xterm-256color 
-source virtualenvwrapper.sh
 alias l='ls -l'
 unsetopt correct_all
 
@@ -99,3 +98,34 @@ if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+
+fpath=(~/.wrad/completion $fpath) 
+
+autoload -U compinit
+
+compinit
+
+
+
+
+#zstyle ‘:completion:*’ verbose yes
+
+#zstyle ‘:completion:*:descriptions’ format ‘%B%d%b’
+
+#zstyle ‘:completion:*:messages’ format ‘%d’
+
+#zstyle ‘:completion:*:warnings’ format ‘No matches for: %d’
+
+#zstyle ‘:completion:*’ group-name ”
+#
+rel() {
+
+  local f
+
+  f=(~/.wrad/completion/*(.))
+
+  unfunction $f:t 2> /dev/null
+
+  autoload -U $f:t
+
+}

@@ -55,6 +55,8 @@ let g:airline#extensions#branch#enabled = 1
 " filter things out of ctrlp
 set wildignore+=*.pyc
 
+let g:syntastic_python_checkers=['flake8']
+
 " close quickfix when exiting insert mode (mostly for pydoc window popups)
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
