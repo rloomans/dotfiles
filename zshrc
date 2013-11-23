@@ -38,7 +38,7 @@ plugins=(git history-substring-search command-not-found)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/home/jsweeney/grails/bin:/home/jsweeney/bin:/home/jsweeney/wotif-bin:/home/jsweeney/glassfish/bin:/home/jsweeney/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/jsweeney/jython/bin:/opt/apache-maven/bin:/opt/gradle/bin:/opt/Eracom/bin
+export PATH=~/bin:$PATH
 export PATH='/opt/firefox':$PATH
 export TERM=xterm-256color 
 alias l='ls -l'
@@ -97,35 +97,3 @@ export TERM="xterm-256color"
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-
-fpath=(~/.wrad/completion $fpath) 
-
-autoload -U compinit
-
-compinit
-
-
-
-
-#zstyle ‘:completion:*’ verbose yes
-
-#zstyle ‘:completion:*:descriptions’ format ‘%B%d%b’
-
-#zstyle ‘:completion:*:messages’ format ‘%d’
-
-#zstyle ‘:completion:*:warnings’ format ‘No matches for: %d’
-
-#zstyle ‘:completion:*’ group-name ”
-#
-rel() {
-
-  local f
-
-  f=(~/.wrad/completion/*(.))
-
-  unfunction $f:t 2> /dev/null
-
-  autoload -U $f:t
-
-}
