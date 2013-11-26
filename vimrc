@@ -28,6 +28,7 @@ au BufNewFile,BufRead *.tac set filetype=python
 
 " key mapping
 map <leader>t :NERDTreeToggle<CR>
+map <leader>o :TagBar<CR>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
 
