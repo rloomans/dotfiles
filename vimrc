@@ -65,15 +65,49 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 let g:ctrlp_cmd = 'CtrlPCurWD'
 
 " sane default whitespace/indent. Tabs, whoneedsem.
-set tabstop=4
+"set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set textwidth=80
 set smarttab
 set expandtab
 
+" For all text files set 'textwidth' to 78 characters.
+autocmd FileType text setlocal textwidth=78
+
 " always show statusline (even when only one buffer open)
 set laststatus=2
 
 " allow dirty buffer switching (insert double entendre here)
 set hidden
+
+" keep 50 lines of command line history
+set history=50
+
+" show the cursor position all the time
+set ruler
+"
+" display incomplete commands
+set showcmd
+
+" Show matching brackets.
+set showmatch	
+
+" don't use ex mode, use q for formatting
+map q gq
+
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+		  \ | wincmd p | diffthis
+endif
+
+highlight RedundantSpaces ctermbg=red guibg=red
+match RedundantSpaces /\s\+$\| \+\ze\t/
+
+" make tab in v mode work like I think it should (keep highlighting):
+vmap <tab> >gv
+vmap <s-tab> <gv
+
