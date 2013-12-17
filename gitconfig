@@ -1,0 +1,14 @@
+[user]
+	email = robert.loomans@wotifgroup.com
+	name = Robert Loomans
+[color]
+	ui = auto
+[column]
+	ui = auto
+[merge]
+	stat = 1
+	tool = meld
+[diff]
+	tool = meld
+[push]
+	default = simple
