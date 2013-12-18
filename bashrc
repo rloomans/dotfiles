@@ -23,7 +23,7 @@ HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
-shopt -s checkwinsize
+shopt -s checkwinsize histappend histreedit histverify extglob
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -42,6 +42,22 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+#xterm-color)
+#    PS1='[ \[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] ]\$ '
+#    ;;
+*)
+    PS1='\[\033[0;31m\]$(returncode)\[\033[0;37m\]\[\033[0;35m\]${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u@\h\[\033[01;37m\]:\[\033[01;36m\]\w$(__git_ps1 " (%s)") >\[\033[0;00m\] '
+    ;;
+esac
+
+# don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=erasedups,ignorespace
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+export HISTIGNORE="&:ls:[bf]g: "
+export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 
 # mint-fortune
 /usr/bin/mint-fortune
@@ -53,6 +69,12 @@ export ORACLE_HOME=/opt/oracle/instantclient10_1
 
 source /usr/local/bin/virtualenvwrapper.sh
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/home/rloomans/perl5";
+export PERL_MB_OPT="--install_base /home/rloomans/perl5";
+export PERL_MM_OPT="INSTALL_BASE=/home/rloomans/perl5";
+export PERL5LIB="/home/rloomans/perl5/lib/perl5:$PERL5LIB";
+export PATH="/home/rloomans/perl5/bin:$PATH";
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/home/rloomans/.gvm/bin/gvm-init.sh" ]] && source "/home/rloomans/.gvm/bin/gvm-init.sh"
