@@ -33,7 +33,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search command-not-found)
+plugins=(git history-substring-search command-not-found zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -79,7 +79,7 @@ export PYTHONPATH=$PYTHONPATH:/home/jsweeney/pylib
 
 # this seems to be needed by vim Powerline for colors to work
 # not sure why...!
-export TERM="xterm-256color"
+#export TERM="xterm-256color"
 
 # function _fab_complete() { 
 #     local cur 
