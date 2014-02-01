@@ -44,6 +44,11 @@ nmap j gj
 map <M-pagedown> :bn <CR>
 map <M-pageup> :bp <CR>
 
+" faster tab nav
+nnoremap th  :tabprev<CR>
+nnoremap tl  :tabnext<CR>
+nnoremap tt  :tabclose<CR>
+
 " plugin customisation
 " --------------------
 
@@ -55,6 +60,9 @@ let g:airline#extensions#branch#enabled = 1
 
 " filter things out of ctrlp
 set wildignore+=*.pyc
+
+" filter things out of nerdtree
+let NERDTreeIgnore=['\.pyc$', '\~$']
 
 let g:syntastic_python_checkers=['flake8']
 

@@ -2,7 +2,6 @@
 *.pyc
 .ropeproject
 build
-dist
 *.egg-info
 *.orig
 
