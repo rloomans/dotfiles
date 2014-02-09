@@ -36,6 +36,8 @@ imap <C-s> <esc>:w<CR>
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
 
+imap <c-space> <c-x><c-o>
+
 " move screenlines not wrapped lines (duh)
 nmap k gk
 nmap j gj
@@ -71,6 +73,9 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 let g:ctrlp_cmd = 'CtrlPCurWD'
+
+" backspace like a boss
+set backspace=indent,eol,start
 
 " sane default whitespace/indent. Tabs, whoneedsem.
 set tabstop=4
