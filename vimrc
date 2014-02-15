@@ -28,7 +28,7 @@ au BufNewFile,BufRead *.tac set filetype=python
 
 " key mapping
 map <leader>t :NERDTreeToggle<CR>
-map <leader>o :TagBar<CR>
+map <leader>o :Tagbar<CR>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
 
@@ -73,6 +73,10 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 let g:ctrlp_cmd = 'CtrlPCurWD'
+
+" tagbar
+let g:tagbar_autoclose = 1
+let g:tagbar_sort = 0  " sort by position
 
 " backspace like a boss
 set backspace=indent,eol,start
