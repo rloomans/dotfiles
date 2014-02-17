@@ -1,9 +1,10 @@
+dist
+
 *.swp
 *.pyc
 .ropeproject
 .codeintel
 build
-dist
 *.egg-info
 *.orig
 

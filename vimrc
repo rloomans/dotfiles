@@ -28,13 +28,15 @@ au BufNewFile,BufRead *.tac set filetype=python
 
 " key mapping
 map <leader>t :NERDTreeToggle<CR>
-map <leader>o :TagBar<CR>
+map <leader>o :Tagbar<CR>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
 
 " Emacs-like beginning and end of line in insert mode
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
+
+imap <c-space> <c-x><c-o>
 
 " move screenlines not wrapped lines (duh)
 nmap k gk
@@ -43,6 +45,11 @@ nmap j gj
 " Easymode next/prev buffer. Old habit.
 map <M-pagedown> :bn <CR>
 map <M-pageup> :bp <CR>
+
+" faster tab nav
+nnoremap th  :tabprev<CR>
+nnoremap tl  :tabnext<CR>
+nnoremap tt  :tabclose<CR>
 
 " plugin customisation
 " --------------------
@@ -56,6 +63,9 @@ let g:airline#extensions#branch#enabled = 1
 " filter things out of ctrlp
 set wildignore+=*.pyc
 
+" filter things out of nerdtree
+let NERDTreeIgnore=['\.pyc$', '\~$']
+
 let g:syntastic_python_checkers=['flake8']
 
 " close quickfix when exiting insert mode (mostly for pydoc window popups)
@@ -63,6 +73,13 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 let g:ctrlp_cmd = 'CtrlPCurWD'
+
+" tagbar
+let g:tagbar_autoclose = 1
+let g:tagbar_sort = 0  " sort by position
+
+" backspace like a boss
+set backspace=indent,eol,start
 
 " sane default whitespace/indent. Tabs, whoneedsem.
 set tabstop=4
