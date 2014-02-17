@@ -38,7 +38,8 @@ plugins=(git history-substring-search command-not-found)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=~/bin:$PATH
+export PATH='/home/jsweeney/grails/bin':$PATH
+export PATH=~/bin:$PATH:/opt/apache-maven/bin
 export PATH='/opt/firefox':$PATH
 export TERM=xterm-256color 
 alias l='ls -l'
@@ -58,7 +59,7 @@ vim()
     command vim "$@"
     stty "$STTYOPTS"
 }
-alias mvn-jetty-debug='MAVEN_OPTS="-XX:MaxPermSize=2048m -Xrunjdwp:transport=dt_socket,address=8000,server=y" mvn jetty:run'
+alias mvn-jetty-debug='MAVEN_OPTS="-XX:MaxPermSize=2048m -Xrunjdwp:transport=dt_socket,address=6666,server=y" mvn jetty:run'
 alias mysql="mysql --pager='less -n -i -S -F -X'"
 alias l=ls
 export ORACLE_HOME=/opt/instantclient
@@ -72,7 +73,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/jni/
 export PAGER='less -n -i -S -F -X'
 export PYTHONPATH=$PYTHONPATH:/home/jsweeney/python
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
-
+export JAVA_HOME=/usr/lib/jvm/java-7-u51-oracle
 export GIT_PS1_SHOWDIRTYSTATE=true
 source /usr/local/bin/virtualenvwrapper.sh
 export PYTHONPATH=$PYTHONPATH:/home/jsweeney/pylib
@@ -81,12 +82,20 @@ export PYTHONPATH=$PYTHONPATH:/home/jsweeney/pylib
 # not sure why...!
 export TERM="xterm-256color"
 
-# function _fab_complete() { 
-#     local cur 
- #    cur="${COMP_WORDS[COMP_CWORD]}" 
-#     COMPREPLY=( $(compgen -W "$(fab -F short -l)" -- ${cur}) ) 
-#     return 0 
-# } 
+
+fpath=(~/.wrad/completion $fpath) 
+
+autoload -U compinit
+
+compinit
+
+
+ function _fab_complete() { 
+     local cur 
+     cur="${COMP_WORDS[COMP_CWORD]}" 
+     COMPREPLY=( $(compgen -W "$(fab -F short -l)" -- ${cur}) ) 
+     return 0 
+ } 
 
 # enable programmable completion features (you don't need to enable 
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile 

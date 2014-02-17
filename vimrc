@@ -72,6 +72,10 @@ set textwidth=80
 set smarttab
 set expandtab
 
+" xml indenting:
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+
+
 " always show statusline (even when only one buffer open)
 set laststatus=2
 

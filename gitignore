@@ -1,6 +1,7 @@
 *.swp
 *.pyc
 .ropeproject
+.codeintel
 build
 dist
 *.egg-info
@@ -14,7 +15,11 @@ tags
 .settings
 .classpath
 .checkstyle
+.externalToolBuilders
+maven-eclipse.xml
 target/
 
 # temp file:
 *~
+
+
