@@ -70,12 +70,12 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/jni/
 #alias ijython='/home/jsweeney/jython/bin/ipython'
 
 export PAGER='less -n -i -S -F -X'
-export PYTHONPATH=$PYTHONPATH:/home/jsweeney/python
+export PYTHONPATH=$PYTHONPATH:$HOME/python
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 source /usr/local/bin/virtualenvwrapper.sh
-export PYTHONPATH=$PYTHONPATH:/home/jsweeney/pylib
+export PYTHONPATH=$PYTHONPATH:$HOME/pylib
 
 # this seems to be needed by vim Powerline for colors to work
 # not sure why...!
