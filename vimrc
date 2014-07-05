@@ -56,6 +56,7 @@ nnoremap tt  :tabclose<CR>
 
 " jedi, only complete on c-space
 let g:jedi#popup_on_dot = 0
+let g:jedi#show_call_signatures = 0
 
 " turn on git branch for airline
 let g:airline#extensions#branch#enabled = 1
@@ -85,7 +86,7 @@ set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set textwidth=80
+set textwidth=79
 set smarttab
 set expandtab
 
