@@ -38,11 +38,13 @@ plugins=(git history-substring-search command-not-found zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=~/bin:$PATH
+export PATH='/usr/local/bin':~/bin:$PATH
 export PATH='/opt/firefox':$PATH
 export TERM=xterm-256color 
 alias l='ls -l'
 unsetopt correct_all
+
+
 
 # tricks so that ctrl-s works in vim
 alias vim="stty stop '' -ixoff ; vim"
@@ -58,6 +60,7 @@ vim()
     command vim "$@"
     stty "$STTYOPTS"
 }
+
 alias mvn-jetty-debug='MAVEN_OPTS="-XX:MaxPermSize=2048m -Xrunjdwp:transport=dt_socket,address=8000,server=y" mvn jetty:run'
 alias mysql="mysql --pager='less -n -i -S -F -X'"
 alias l=ls
