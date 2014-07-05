@@ -67,3 +67,9 @@
 [submodule "vim/bundle/textobj-python"]
 	path = vim/bundle/textobj-python
 	url = https://github.com/bps/vim-textobj-python.git
+[submodule "ultisnips"]
+	path = ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim/bundle/ultisnips"]
+	path = vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
