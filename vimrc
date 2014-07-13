@@ -35,6 +35,12 @@ imap <C-s> <esc>:w<CR>
 " show whitespace 
 nmap <leader>l :set list!<CR>
 
+" Toggle spell checking on and off with `\s`
+nmap <silent> <leader>s :set spell!<CR>
+
+" Set region to British English
+set spelllang=en_gb
+
 " Emacs-like beginning and end of line in insert mode
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
