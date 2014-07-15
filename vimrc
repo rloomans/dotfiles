@@ -35,6 +35,10 @@ imap <C-s> <esc>:w<CR>
 " show whitespace 
 nmap <leader>l :set list!<CR>
 
+
+" formatting with par (gq)
+set formatprg=par
+
 " Toggle spell checking on and off with `\s`
 nmap <silent> <leader>s :set spell!<CR>
 
