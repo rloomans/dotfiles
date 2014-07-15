@@ -32,6 +32,15 @@ map <leader>o :Tagbar<CR>
 map <C-s> <esc>:w<CR>
 imap <C-s> <esc>:w<CR>
 
+" show whitespace 
+nmap <leader>l :set list!<CR>
+
+" Toggle spell checking on and off with `\s`
+nmap <silent> <leader>s :set spell!<CR>
+
+" Set region to British English
+set spelllang=en_gb
+
 " Emacs-like beginning and end of line in insert mode
 imap <c-e> <c-o>$
 imap <c-a> <c-o>^
@@ -56,6 +65,7 @@ nnoremap tt  :tabclose<CR>
 
 " jedi, only complete on c-space
 let g:jedi#popup_on_dot = 0
+let g:jedi#show_call_signatures = 0
 
 " turn on git branch for airline
 let g:airline#extensions#branch#enabled = 1
@@ -85,7 +95,7 @@ set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set textwidth=80
+set textwidth=79
 set smarttab
 set expandtab
 
