@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
 
+set -e
+
 if ! hash dotfiles 2>/dev/null; then
     echo 'Installing dotfiles (needs pip)'
     sudo pip install dotfiles

@@ -76,7 +76,5 @@ shopt -s checkwinsize histappend histreedit histverify extglob
 source ~/.git-prompt.sh
 export -f __gitdir __git_ps1_show_upstream __git_ps1
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/home/rloomans/.gvm/bin/gvm-init.sh" ]] && source "/home/rloomans/.gvm/bin/gvm-init.sh"

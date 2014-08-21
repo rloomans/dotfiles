@@ -4,12 +4,34 @@ realias ()
     source ~/.bash_aliases
 }
 
+alias geh=egh
+
 alias dnstracer="dnstracer -C -o "
 
 alias mmv="mmv -v"
 
 alias diff='diff -u'
 alias rcsdiff='rcsdiff -u'
+
+gh ()
+{
+    history | grep "$1"
+}
+
+egh ()
+{
+    zgrep -h "$@" ~/.bash_eternal_history.* ~/.bash_eternal_history
+}
+
+cdd ()
+{
+    cd "$1" && ls
+}
+
+nd ()
+{
+    mkdir "$1" && cd "$1"
+}
 
 pt ()
 {
@@ -93,5 +115,11 @@ truncate_pwd ()
   fi
 }
 
+jcurl ()
+{
+    curl -s $@ | sed -e 's/},/},\n######################\n/g' -e 's/",/",\n/g'
+}
 
 alias rlsqlplus='rlwrap /opt/oracle/instantclient10_1/sqlplus'
+
+alias ack='ACK_PAGER_COLOR="less -x4SRFX" /opt/local/libexec/perl5.12/ack -a'
