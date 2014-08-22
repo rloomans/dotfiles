@@ -67,7 +67,7 @@ export GRADLE_HOME="$HOME/Applications/gradle-1.8"
 export GRAILS_HOME="$HOME/Applications/grails-2.3.3"
 export ORACLE_HOME=/opt/oracle/instantclient10_1
 
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
 
 export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/home/rloomans/perl5";
 export PERL_MB_OPT="--install_base /home/rloomans/perl5";

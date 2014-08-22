@@ -74,7 +74,7 @@ export PYTHONPATH=$PYTHONPATH:/home/jsweeney/python
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 
 export GIT_PS1_SHOWDIRTYSTATE=true
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
 export PYTHONPATH=$PYTHONPATH:/home/jsweeney/pylib
 
 # this seems to be needed by vim Powerline for colors to work
