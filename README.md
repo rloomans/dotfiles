@@ -5,7 +5,7 @@ Install
 -------
 
 ```sh
-git clone https://github.com/jaysw/dotfiles.git ~/.dotfiles
+git clone https://github.com/rloomans/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./sync.sh
 ```
